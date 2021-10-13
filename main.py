@@ -45,7 +45,8 @@ while 1:
     print("{:>3},{:>3}".format(JoystickObject.getX(), JoystickObject.getY())) #thanks gavin and hannah!
     time.sleep(0.1)
   except KeyboardInterrupt:
-      print("\nEXITING!")
+    print("\nEXITING!")
+    break
 
 
 
