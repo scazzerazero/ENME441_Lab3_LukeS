@@ -42,7 +42,8 @@ class Joystick:
 JoystickObject=Joystick(0x48)
 while 1:
   try:
-    print("{:>3},{:>3}".format(JoystickObject.getX(), JoystickObject.getY())) #thanks gavin and hannah!
+    #thanks gavin and hannah for the right shift advice!
+    print("{:>3}, {:>3}".format(JoystickObject.getX(), JoystickObject.getY()))
     time.sleep(0.1)
   except KeyboardInterrupt:
     print("\nEXITING!")
