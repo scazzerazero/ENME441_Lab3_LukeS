@@ -1,4 +1,5 @@
-#   To check address: sudo i2cdetect -y 1
+# Luke scazzero ENME441 F21
+#To check address: sudo i2cdetect -y 1
 
 import smbus
 import time
