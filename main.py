@@ -35,9 +35,9 @@ class Joystick:
     self.ADC=PCF8591(address)
 
   def getX(self):
-    return PCF8591.read(1) #read channel one
+    return PCF8591.read(0) #read channel one
   def getY(self):
-    return PCF8591.read(2) #read channel two
+    return PCF8591.read(1) #read channel two
 
 JoystickObject=Joystick(0x48)
 while 1:
