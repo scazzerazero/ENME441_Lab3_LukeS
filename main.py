@@ -30,19 +30,16 @@ class PCF8591:
 
 
 class Joystick: #creating joystick class
-  def __init__(self,ADCaddress,Xval,Yval): #giving our class attributes 
+  def __init__(self,ADCaddress): #giving our class attributes 
     self.ADC=PCF8591(ADCaddress) # By composition, we're extending the PCF8591 class. using it to define our Joystick class's attribute self.ADC
-    self.Xval= Xval #other attributes
-    self.Yval= Yval
+
 
   def getX(self): #a method to getX reading
-    Xval =self.ADC.read(1) # val from ADC chn 1. depends on where you plugged in joystick wires
-    return Xval
+    return self.ADC.read(1) # val from ADC chn 1. depends on where you plugged in joystick wires
   def getY(self):
-    Yval = self.ADC.read(2) # val from ADC chn 2
-    return Yval
+    return self.ADC.read(2) # val from ADC chn 2
 
-JoystickObject=Joystick(0x48)
+JoystickObject=Joystick(0x48) #creating an instance of our joystick class. Needs address input
 while 1:
   try:
     #thanks gavin and hannah for the right shift advice!
